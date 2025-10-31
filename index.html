@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Converter</title>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"
+      defer
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="src/cli.js" type="module" defer></script>
+    <script src="src/convertUnits.js" type="module" defer></script>
+    <script src="src/interface.js" type="module" defer></script>
+  </head>
+  <body
+    class="flex justify-center items-center h-screen bg-gray-600 text-gray-300"
+  >
+    <div class="border-3 p-6 rounded-lg">
+      <h1 class="text-2xl font-bold">Unit Converter</h1>
+      <ul class="flex gap-4 mt-4 mb-4">
+        <li id="length-button" class="active cursor-pointer">Length</li>
+        <li id="weight-button" class="cursor-pointer">Weight</li>
+        <li id="temperature-button" class="cursor-pointer">Temperature</li>
+      </ul>
+
+      <div id="tab-content">
+        <div id="length-content" class="hidden">
+          <p>Enter the length to convert</p>
+          <input id="length-input" autocomplete="off" />
+          <p>Unit to convert from</p>
+          <input id="convert-from" autocomplete="off" />
+          <p>Unit to convert to</p>
+          <input id="convert-to" autocomplete="off" />
+        </div>
+
+        <div id="weight-content" class="hidden">
+          <p>Enter the weight to convert</p>
+          <input id="weight-input" autocomplete="off" />
+          <p>Unit to convert from</p>
+          <input id="convert-from" autocomplete="off" />
+          <p>Unit to convert to</p>
+          <input id="convert-to" autocomplete="off" />
+        </div>
+
+        <div id="temperature-content" class="hidden">
+          <p>Enter the temperature to convert</p>
+          <input id="temperature-input" autocomplete="off" />
+          <p>Unit to convert from</p>
+          <input id="convert-from" autocomplete="off" />
+          <p>Unit to convert to</p>
+          <input id="convert-to" autocomplete="off" />
+        </div>
+        <button
+          id="convert-button"
+          class="border-1 p-2 pr-3 pl-3 mt-4 font-bold hover:bg-gray-300 cursor-pointer"
+        >
+          Convert
+        </button>
+      </div>
+      <div id="result-tab" class="hidden">
+        <h6 class="text-xl">Result of your calculation</h6>
+        <p><span id="unit-from"></span> = <span id="unit-to"></span></p>
+        <button
+          id="reset-button"
+          class="border-1 p-2 pr-3 pl-3 mt-4 font-bold hover:bg-gray-300 cursor-pointer"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+.active {
+  display: block;
+}
+
+li.active {
+  color: blue;
+  text-decoration: underline;
+}
+
+input {
+  border: solid 0.1px;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.hide {
+  display: none;
+}
