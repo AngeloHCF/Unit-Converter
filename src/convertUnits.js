@@ -25,7 +25,7 @@ export function lengthConverter(number, from, to) {
     const fromFactor = Number(allowedUnits.length[from]);
     const toFactor = Number(allowedUnits.length[to]);
 
-    convertedNumber = number * fromFactor * toFactor;
+    convertedNumber = number * fromFactor / toFactor;
     showResult(number, from, convertedNumber, to);
   }
 }
